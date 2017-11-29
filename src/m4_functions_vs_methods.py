@@ -74,7 +74,7 @@ def main():
     # Make the animation go much faster.
     #   First number:  bigger means faster.
     #   Second number: bigger means slower.
-    window.tracer(1.5, 1)
+    window.tracer(1, 1)
 
     jump_and_move_turtle(100, 50, 200, -100)
     turtle = rg.SimpleTurtle('square')
@@ -84,6 +84,8 @@ def main():
 
     # When the TODOs ask you to test YOUR code, put YOUR tests here:
     try_methods()
+    try_functions()
+    try_methods_and_functions()
 
     window.close_on_mouse_click()
 
@@ -172,13 +174,13 @@ def try_methods():
       -- forward    50 units
       -- backward  100 units
     """
-    Jake = rg.SimpleTurtle()
-    Jake.pen = rg.Pen('brown', 5)
-    Jake.pen_down()
-    Jake.forward(150)
-    Jake.left(90)
-    Jake.forward(50)
-    Jake.backward(100)
+    jake = rg.SimpleTurtle()
+    jake.pen = rg.Pen('brown', 5)
+    jake.pen_down()
+    jake.forward(150)
+    jake.left(90)
+    jake.forward(50)
+    jake.backward(100)
     ####################################################################
     # Done: 3. Implement this function, per its doc-string above.
     #    Put a statement in   main   to test this function
@@ -193,9 +195,12 @@ def try_functions():
      -- One jumps to (100, 200), then moves (while drawing) to (0, 0)
      -- One jumps to (-50, 50), then moves (while drawing) to (100, 100)
     """
-    
+    jump_and_move_turtle(200, 100, 300, 30)
+    jump_and_move_turtle(100, 200, 0, 0)
+    jump_and_move_turtle(-50, 50, 100, 100)
+
     ####################################################################
-    # TODO: 4. Implement this function, per its doc-string above.
+    # Done: 4. Implement this function, per its doc-string above.
     #    Put a statement in   main   to test this function
     #    (by calling this function).  IMPORTANT, IMPORTANT, IMPORTANT:
     #    Keep reading the rest of this TO DO before doing the above!
@@ -240,8 +245,21 @@ def try_methods_and_functions():
 
       8. Draw a SQUARE whose sides are each of length 50.
     """
+    maddie = rg.SimpleTurtle()
+    maddie.pen = rg.Pen('blue', 5)
+    maddie.backward(150)
+    maddie.speed = 1
+    draw_many_squares(maddie, 10, 50, 15)
+    maddie.speed = 100
+    maddie.pen = rg.Pen('blue', 35)
+    draw_many_squares(maddie, 8, 300, 60)
+    maddie.pen = rg.Pen('black', 3)
+    maddie.backward(200)
+    maddie.draw_circle(30)
+    maddie.draw_square(50)
+
     ####################################################################
-    # TODO: 5. Implement this function, per its doc-string above.
+    # Done: 5. Implement this function, per its doc-string above.
     #    Put a statement in   main   to test this function
     #    (by calling this function).  IMPORTANT, IMPORTANT, IMPORTANT:
     #    Keep reading the rest of this TO DO before doing the above!

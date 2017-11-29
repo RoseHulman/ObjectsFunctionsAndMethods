@@ -4,12 +4,12 @@ Demonstrates using (calling) FUNCTIONS and using (calling) METHODS:
   -- how they differ.
 
 Authors: David Mutchler, Dave Fisher, Valerie Galluzzi, Amanda Stouder,
-         their colleagues and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         their colleagues and Abbie Peterson.
+"""  # Done: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 ########################################################################
 #
-# TODO: 2.
+# Done: 2.
 #   READ this comment, ASKING QUESTIONS as needed to understand it.
 #
 #   For objects that are CONSTRUCTED, we use the DOT notation
@@ -74,15 +74,16 @@ def main():
     # Make the animation go much faster.
     #   First number:  bigger means faster.
     #   Second number: bigger means slower.
-    window.tracer(1, 1)
+    window.tracer(1.5, 1)
 
     jump_and_move_turtle(100, 50, 200, -100)
     turtle = rg.SimpleTurtle('square')
     draw_many_squares(turtle, 3, 75, 15)
     turtle3()
 
-    # When the TODOs ask you to test YOUR code, put YOUR tests here:
 
+    # When the TODOs ask you to test YOUR code, put YOUR tests here:
+    try_methods()
 
     window.close_on_mouse_click()
 
@@ -171,8 +172,15 @@ def try_methods():
       -- forward    50 units
       -- backward  100 units
     """
+    Jake = rg.SimpleTurtle()
+    Jake.pen = rg.Pen('brown', 5)
+    Jake.pen_down()
+    Jake.forward(150)
+    Jake.left(90)
+    Jake.forward(50)
+    Jake.backward(100)
     ####################################################################
-    # TODO: 3. Implement this function, per its doc-string above.
+    # Done: 3. Implement this function, per its doc-string above.
     #    Put a statement in   main   to test this function
     #    (by calling this function).
     ####################################################################
@@ -185,6 +193,7 @@ def try_functions():
      -- One jumps to (100, 200), then moves (while drawing) to (0, 0)
      -- One jumps to (-50, 50), then moves (while drawing) to (100, 100)
     """
+    
     ####################################################################
     # TODO: 4. Implement this function, per its doc-string above.
     #    Put a statement in   main   to test this function

@@ -14,6 +14,8 @@ import rosegraphics as rg
 def main():
     """ Calls the other functions to demonstrate and/or test them. """
     # Test your functions by putting calls to them here:
+    two_circles()
+    circle_and_rectangle()
 
 
 def two_circles():
@@ -26,8 +28,22 @@ def two_circles():
            -- One is filled with some color and one is not filled.
     -- Waits for the user to press the mouse, then closes the window.
     """
+
+
+    window = rg.RoseWindow()
+    point = rg.Point(50, 90)
+    point.attach_to(window)
+    circle_one = rg.Circle(point, 18)
+    circle_one.attach_to(window)
+    circle_one.fill_color ='blue'
+    point_two = rg.Point(89, 72)
+    point_two.attach_to(window)
+    circle_two = rg.Circle(point_two, 5)
+    circle_two.attach_to(window)
+    window.render()
+    window.close_on_mouse_click()
     # ------------------------------------------------------------------
-    # TODO: 2. Implement this function, per its doc-string above.
+    # Done: 2. Implement this function, per its doc-string above.
     #    -- ANY two rg.Circle objects that meet the criteria are fine.
     #    -- File  COLORS.txt  lists all legal color-names.
     # Put a statement in   main   to test this function
@@ -66,8 +82,31 @@ def circle_and_rectangle():
            75.0
            150.0
     """
+
+
+    window = rg.RoseWindow()
+    point = rg.Point(69, 89)
+    point.attach_to(window)
+    circle = rg.Circle(point, 57)
+    circle.fill_color = 'blue'
+    circle.attach_to(window)
+    point1 = rg.Point(300, 40)
+    point1.attach_to(window)
+    points = rg.Point(375, 10)
+    points.attach_to(window)
+    rect = rg.Rectangle(points, point1)
+    rect.attach_to(window)
+    window.render()
+    print(1)
+    print('blue')
+    print(point)
+    print(1)
+    print('black')
+    print(point1)
+    print(points)
+    window.close_on_mouse_click()
     # ------------------------------------------------------------------
-    # TODO: 3. Implement this function, per its doc-string above.
+    # Done: 3. Implement this function, per its doc-string above.
     #   -- ANY objects that meet the criteria are fine.
     # Put a statement in   main   to test this function
     #    (by calling this function).
